@@ -16,6 +16,12 @@ Enter in project's folder
 cd wit-weather
 ```
 
+Install the dependencies
+
+```bash
+npm install
+```
+
 Then run it!
 
 ```bash
