@@ -1,9 +1,10 @@
-import * as S from './styles'
+import * as S from "./styles";
+import Logo from "../Logo";
 
 const Header = () => (
   <S.Wrapper>
-    <h1>Header</h1>
+    <Logo size="large" />
   </S.Wrapper>
-)
+);
 
-export default Header
+export default Header;
