@@ -16,7 +16,7 @@ const SearchBar = ({
   onInput,
   ...props
 }: SearchBarProps) => {
-  const { setData, setLoading, setForecastData } = useContext(AppContext);
+  const { setData, setLoading, setForecastData, setError } = useContext(AppContext);
   const [searchValue, setSearchValue] = useState(initialValue);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +31,10 @@ const SearchBar = ({
       setData([]);
 
       const response = await getCity(value);
+      console.log(response);
+      if (response.cod === '404') {
+        setError(true);
+      }
       const forecastResponse = await getCityForecast(value);
       setData(response);
       setForecastData(forecastResponse.list);

@@ -7,11 +7,10 @@ import Map from "../../components/Map";
 import Switch from "../Switch";
 import * as S from "./styles";
 
-
 const CityWeather = () => {
   const { data, tempType, convertToF, forecastData } = useContext(AppContext);
 
-   return (
+  return (
     <S.Wrapper>
       <S.CityName>
         <S.Top>
@@ -60,6 +59,7 @@ const CityWeather = () => {
                   condition={el.weather[0].main}
                 />
               );
+            return null;
           })}
         </div>
         <Map />{" "}

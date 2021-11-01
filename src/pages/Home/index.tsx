@@ -6,17 +6,19 @@ import SearchBar from "../../components/SearchBar";
 import CityWeather from "../../components/CityWeather";
 import Loading from "../../components/Loading";
 import NoResults from "../../components/NoResults";
+import Error from "../../components/Error";
 
 const Home: React.FC = () => {
-  const { tempType, loading, data } = useContext(AppContext);
-  console.log(tempType);
+  const { loading, data, error } = useContext(AppContext);
+  console.log(error)
   return (
     <Container>
       <S.Wrapper>
         <SearchBar />
         {loading && <Loading />}
         {!loading && data.length === 0 && <NoResults />}
-        {data.length !== 0 && <CityWeather />}
+        {!error && data.length !== 0 &&  <CityWeather />}
+        {error && <Error />}
       </S.Wrapper>
     </Container>
   );

@@ -26,6 +26,7 @@ export const Button = styled.button`
     &:disabled {
       background-color: ${theme.colors.lightOrange};
       color: ${theme.colors.gray};
+      cursor: not-allowed;
     }
     ${media.lessThan("large")`
     width: 45%;
