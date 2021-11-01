@@ -21,11 +21,11 @@ export const Button = styled.button`
     border: none;
     background-color: ${theme.colors.primary};
     cursor: pointer;
-    color: ${theme.colors.darkGray};
+    color: ${theme.colors.lightGray};
     transition: all 0.2s;
     &:disabled {
       background-color: ${theme.colors.lightOrange};
-      color: ${theme.colors.gray};
+      color: ${theme.colors.darkGray};
       cursor: not-allowed;
     }
     ${media.lessThan("large")`

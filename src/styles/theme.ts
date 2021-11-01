@@ -23,7 +23,7 @@ export default {
     },
   },
   colors: {
-    primary: "#f15623",
+    primary: "#054A91",
     secondary: "#3CD3C1",
     mainBg: "#06092B",
     lightBg: "#F2F2F2",
@@ -33,7 +33,7 @@ export default {
     gray: "#8F8F8F",
     darkGray: "#2E2F42",
     red: "#FF6347",
-    lightOrange: "#FCECD2",
+    lightOrange: "#DBE4EE",
     lightBlue: "#6DBEC5",
   },
   spacings: {

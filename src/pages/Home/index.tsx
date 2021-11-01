@@ -10,7 +10,6 @@ import Error from "../../components/Error";
 
 const Home: React.FC = () => {
   const { loading, data, error } = useContext(AppContext);
-  console.log(error)
   return (
     <Container>
       <S.Wrapper>

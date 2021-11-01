@@ -16,22 +16,20 @@ const SearchBar = ({
   onInput,
   ...props
 }: SearchBarProps) => {
-  const { setData, setLoading, setForecastData, setError } = useContext(AppContext);
+  const { setData, setLoading, setForecastData, setError, error } = useContext(AppContext);
   const [searchValue, setSearchValue] = useState(initialValue);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.currentTarget.value;
     setSearchValue(newValue);
-    console.log(newValue);
   };
 
   const makeSearch = async (value: string) => {
     try {
       setLoading(true);
-      setData([]);
+       setData([]);
 
       const response = await getCity(value);
-      console.log(response);
       if (response.cod === '404') {
         setError(true);
       }
